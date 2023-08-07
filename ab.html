@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        #parent
+        {
+            height: 800px;
+            width: 100%;
+            background-color: black;
+        }
+        #child
+        {
+            height:50px ;
+            background-color: black;
+            color: aliceblue;
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+        #child2
+        {
+            height: 50px;
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            line-height: 50px;
+        }
+        #img
+        {
+            height: 700px ;
+            width: 100%;
+            background-image: url(pictures/images.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation-duration: 10s;
+            animation: alternate;
+            animation-iteration-count: infinite;
+        }
+        #img:hover
+        {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        @keyframes Animate {
+            0%{
+                background-image: url(pictures/businessman-photo.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            25%{
+                background-image: url(pictures/2484157.webp);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            50%{
+                background-image: url(pictures/download.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            100%{
+                background-image: url(pictures/photo-1664575602276-acd073f104c1.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">This Is Example Of Div Tag</div>
+        <div id="img"></div>
+        <div id="child2">Created By Abutalha Zaki</div>
+    </div>
+</body>
+</html>
