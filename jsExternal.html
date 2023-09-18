@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="myjavascript.js"></script>
+    <!-- <script>
+        a=parseInt(prompt("Enter the first number"));
+        b=parseInt(prompt("Enter the second number"));
+        vardata=confirm("Are you sure to continue");
+        if(a>b){
+            document.write("<span>"+a+"</span> is greater than <span>"+b+"</span>");
+        }
+        else if(b>a){
+            document.write("<span>"+b+"</span> is greater than <span>"+a+"</span>");
+        }
+        else{
+            document.write("<span>"+a+"</span> is equal to <span>"+b+"</span>");
+        }
+    </script> -->
+    <style>
+        span{
+            color: red;
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Greater </h2>
+    <h2>Greater number Among two </h2>
+    <hr>
+    <span id="sp"></span>
 </body>
+<script>
+    let a=parseInt(prompt("Enter the first number"));
+    let b=parseInt(prompt("Enter the second number"));
+    var data=document.getElementById("sp");
+    if(a>b){
+        data.innerHTML=a+" is greater than "+b;
+    }
+    else if(b>a){
+        data.innerHTML=b+" is greater than "+a;
+    }
+    else{
+        data.innerHTML=a+" is equal to "+b;
+    }       
+</script>
+
 </html>

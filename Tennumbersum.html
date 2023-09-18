@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sum average and product of ten number</h2>
+    <hr>
+    <span id="sp1"></span>
+    <br>
+    <span id="sp2"></span>
+    <br>
+    <span id="sp3"></span>
+</body>
+<script>
+       var sum=0;
+       var p=1;
+       var avg;
+       var i;
+         for(var i=1;i<=10;i++){
+              var num=parseInt(prompt("Enter the number"));
+              sum=sum+num;
+              p=p*num;
+              avg=sum/10;
+         }
+         var x=document.getElementById("sp1");
+         x.innerHTML="Sum of ten number is "+sum;
+         var y=document.getElementById("sp2");
+         y.innerHTML="Product of ten number is "+p;
+         var z=document.getElementById("sp3");
+         z.innerHTML="Average of ten number is "+avg;
+</script>
+</html>
