@@ -1,0 +1,73 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+           <h2> Check Number</h2>
+           <hr>
+           <label>Enter A Number</label>
+           <br>
+            <input type="number" id="num">
+            <br>
+            <span id="sp">
+            <button onclick="checkPrime()">Prime</button>
+            <button onclick="checkFactor()">Factor</button>
+            <button onclick="checkPerfect()">Perfect</button>
+            <br>
+            </span>
+        </div>
+    </body>
+       <script>
+              function checkPrime(){
+                var num=parseInt(document.getElementById("num").value);
+                var flag=0;
+                for(var i=2;i<num;i++){
+                     if(num%i==0){
+                          flag=1;
+                          break;
+                     }
+                }
+                if(flag==0){
+                     document.getElementById("sp").innerHTML=num+" is prime number";
+                }
+                else{
+                     document.getElementById("sp").innerHTML=num+" is not prime number";
+                }
+              }
+              function checkFactor(){
+                var num=parseInt(document.getElementById("num").value);
+                var flag=0;
+                for(var i=2;i<num;i++){
+                     if(num%i==0){
+                          flag=1;
+                          break;
+                     }
+                }
+                if(flag==0){
+                     document.getElementById("sp").innerHTML=num+" is prime number";
+                }
+                else{
+                     document.getElementById("sp").innerHTML=num+" is not prime number";
+                }
+              }
+              function checkPerfect(){
+                var num=parseInt(document.getElementById("num").value);
+                var sum=0;
+                for(var i=1;i<num;i++){
+                     if(num%i==0){
+                          sum=sum+i;
+                     }
+                }
+                if(sum==num){
+                     document.getElementById("sp").innerHTML=num+" is perfect number";
+                }
+                else{
+                     document.getElementById("sp").innerHTML=num+" is not perfect number";
+                }
+              }
+       </script>
+    </html>

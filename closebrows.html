@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Close the browser</h2>
+    <div style="display: flex;font-size: 50;">
+        <button id="ok" onclick="close">Ok</button>
+        <button id="cancel">Cancel</button>
+    </div>
+</body>
+<script>
+   function is prime(n){
+       if(n==1){
+           return false;
+       }
+       else if(n==2){
+           return true;
+       }
+       else{
+           for(var i=2;i<n;i++){
+               if(n%i==0){
+                   return false;
+               }
+           }
+           return true;
+       }
+   }
+</script>
+</html>
