@@ -23,6 +23,10 @@
             
             margin: 0px auto;
         }
+        .btn{
+            margin: 0px auto;
+            display: block;
+        }
         
         
     </style>
@@ -35,18 +39,21 @@
        <img src="https://picsum.photos/300?random=2">
        <img src="https://picsum.photos/300?random=3">
        <img src="https://picsum.photos/300?random=4">
+    </div>
+    <span>
+       <hr>
        <br>
        <span id="sp">
        <br>
        <input type="button" onclick="change()" value="C h a n g e I m a g e s" class="btn btn-success"/>
        <input type="button" onclick="addnew()" value="A d d I m a g e s" class="btn btn-danger"/>
-    </span>
-    </div>
+       </span>
+    </span>    
 </body>
 <script>
     function change()
     {
-        document.getElementById("sp").innerHTML="Images are changing...";
+        document.getElementById("sp").innerHTML="Images Loading...";
         setTimeout(function(){
             location.reload();
 
@@ -54,11 +61,11 @@
     }
     function addnew(){
         // alert("function is called");
-        var imgcontain=document.querySelector(".container");
+        var imgcontainer=document.querySelector(".container");
         var addnewimages=document.createElement("img");
         var counter=Math.floor(Math.random()*200);
         addnewimages.src=`https://picsum.photos/300?random=${counter}`;
-        imgcontain.appendChild(addnewimages);
+        imgcontainer.appendChild(addnewimages);
     }
 </script>
 </html>
