@@ -26,9 +26,10 @@
             margin: 0px auto;
             text-align: center;
         }
-        .btn{
+        #sp{
+            text-align: center;
             margin: 0px auto;
-            width: 15%;
+            width: 50%;
         }
     </style>
 </head>
@@ -40,6 +41,7 @@
        <img src="https://picsum.photos/300?random=2">
        <img src="https://picsum.photos/300?random=3">
        <img src="https://picsum.photos/300?random=4">
+       <img src="https://picsum.photos/300?random=5">
     </div>
     <span>
        <span>
@@ -61,7 +63,6 @@
         },2000);
     }
     function addnew(){
-        // alert("function is called");
         var imgcontainer=document.querySelector(".container");
         var addnewimages=document.createElement("img");
         var counter=Math.floor(Math.random()*200);
