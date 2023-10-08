@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:lightcoral;
+        }
+    </style>
+</head>
+<script>
+       
+    function Calcualte(){
+        var name=document.getElementById("name").value;
+        var code=document.getElementById("code").value;
+        var salary=document.getElementById("salary").value;
+        var hra=0.3*salary;
+        var da=0.2*salary;
+        var ta=0.1*salary;
+        var pf=0.05*salary;
+        var gross_salary=salary+hra+da+ta-pf;
+        var net_salary=gross_salary-pf;
+        document.write("Name:"+name+"<br>");
+        document.write("Employee Code:"+code+"<br>");
+        document.write("Salary:"+salary+"<br>");
+        document.write("HRA:"+hra+"<br>");
+        document.write("DA:"+da+"<br>");
+        document.write("TA:"+ta+"<br>");
+        document.write("PF:"+pf+"<br>");
+        document.write("Gross Salary:"+gross_salary+"<br>");
+        document.write("Net Salary:"+net_salary+"<br>");
+    }
+    function reset(){
+        document.getElementById("name").value="";
+        document.getElementById("code").value="";
+        document.getElementById("salary").value="";
+    }
+
+
+   
+    
+
+</script>
+<body>
+    <h1 style="text-align: center; color: aliceblue;">Generation Payment slip</h1>
+    <hr>
+    <table>
+        
+        
+        <tr>
+            <td>Name</td>   
+            <td><input type="text" id="name" placeholder="Enter Employee Name" ></td>
+        </tr>
+        
+        <tr>
+            <td>Enter Employee Code</td>   
+            <td><input  type="number" id="code" placeholder="Enter Employee Code"></td>
+        </tr>
+        
+        <tr>
+            <td>Enter Salary</td>   
+            <td><input type="number" id="salary" placeholder="Enter Salary" ></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Calculate" onclick="Calcualte()"/></td>
+            <td><input type="button" value="reset" onclick="reset()"/></td>
+        </tr>
+
+        <tr>
+            <td>Enter HRA</td>   
+            <td><input type="number" id="hra" placeholder="" readonly></td>
+        </tr>
+        <tr>
+            <td>Enter DA</td>   
+            <td><input type="number" id="da" placeholder="" readonly></td>
+        </tr>
+        <tr>
+            <td>Enter TA</td>   
+            <td><input type="number" id="ta" placeholder=""readonly></td>
+        </tr>
+        <tr>
+            <td>Enter PF</td>   
+            <td><input type="number" id="pf" placeholder="" readonly></td>
+        </tr>
+        <tr>
+            <td>Enter Gross Salary</td>   
+            <td><input type="number" id="gross_salary" placeholder=""readonly></td>
+        </tr>
+        <tr>
+            <td>Net Salary</td>   
+            <td><input type="number" id="net_salary " placeholder=" "readonly></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
