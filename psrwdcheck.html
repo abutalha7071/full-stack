@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <style>
+        h2{
+            text-align: center;
+            background-color: blue;
+        }
+        .container{
+            width: 50%px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Password Verification</h2>
+    <hr>
+    <h3>You Have 3 Attempts</h3>
+    <br>
+    <label class="form-label">Enter Password</label>
+    <input id="t1" type="password" class="form-control">
+    <br>
+    <span id="sp"></span>
+    <br>
+    <span id="spp"></span>
+    <br>
+    <input id="t2" type="button" value="Process" class="btn btn-success" onclick="Process()">
+</center>
+</body>
+<script>
+    var d=document.getElementById("t1").innerHTML
+    var f=3;
+    function Process(){
+        var d=document.getElementById("t1").value;
+        if(d=="Admin"){
+            document.getElementById("sp").innerHTML="Correct Password";
+        }
+        else{
+            f--;
+            document.getElementById("sp").innerHTML="Wrong Password";
+            document.getElementById("spp").innerHTML="You Have "+f+" Attempts Left";
+            if(f==0){
+                document.getElementById("sp").innerHTML="You Have No Attempts Left";
+                document.getElementById("spp").innerHTML="Please Try Again Later";
+                document.getElementById("t1").disabled=true;
+                document.getElementById("t2").disabled=true;
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            background-color: blue;
+        }
+        input{
+            width: 300px;
+            border: 2px solid black;
+            padding: 7px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>String Related</h2>
+    <hr>
+    <center>
+    <input type="text" id="t1">
+    <br>
+    <br>
+    <span id="sp"></span>
+    <br><br>
+    <span id="spp"></span>
+    <br><br>
+    <input type="button" value="Processing" onclick="process()"/>
+    <br>
+    <input type="button" value="PalindromeCheck" onclick="palin()"/>
+   </center>
+</body>
+<script>
+    function palin()
+    {
+        var d=document.getElementById("t1").value;  
+        var len=d.length;
+        d=d.toUpperCase();
+        var rev="",i;
+        for(i=len-1;i>=0;i--)
+        {
+            var p=d.charAt(i);
+            rev=rev+p;
+        }
+        if(rev==d)
+        {
+            document.getElementById("spp").innerHTML="Palindrome";
+        }
+        else
+        {
+        
+            document.getElementById("spp").innerHTML="Not Palindrome";
+        }
+    }
+   
+
+    function process(){
+        var d=document.getElementById("t1").value;
+        var c=0;
+        for(var i=0;i<=d.length;i++)
+        {
+            var ch=d.charAt(i);
+            if(ch==' ')
+            {
+                c=c+1;
+            }
+    
+
+        }
+        c=c+1; //Space count  will convert into word
+        sp2.innerHTML="Total number of words"+c;
+    }
+    
+    
+</script>
+</html>
