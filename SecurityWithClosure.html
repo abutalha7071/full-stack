@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function outer()
+    {
+        var currentbalance=5000;
+        function deposit(n)
+        {
+            currentbalance=currentbalance+n;
+            return currentbalance;
+        }
+        return(deposit)
+    }
+    var d=outer();
+    var result=d(6000);
+    console.log("The update Result", result);
+    console.log(currentbalance);
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var currentbalance=5000;
+    function deposit(n)
+    {
+        currentbalance=currentbalance+n;
+        return(currentbalance);
+    }
+    var d=deposit(7000);
+    console.log("After deposit the amount is "+d);
+    console.log("Main Current bal Variable ",currentbalance);
+    currentbalance=currentbalance+20000;
+    console.log("Now current bal after updation ", currentbalance);
+</script>
+</html>
