@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            background-color: aqua;
+            margin: -10px;
+            
+        }
+        input{
+            width: 20%;
+        }
+        label{
+           margin-right: 20px;
+        }
+        button{
+            text-align: center;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <center><h2>Practical </h2></center><br>
+    <br>
+   <center>
+    <div><label for="science"> Science</label><input id="science" type="text"></div><br>
+    <div><label for="maths"> Maths</label><input id="maths" type="text"></div><br>
+    <div><label for="chemistry"> Chemistry</label><input id="chemistry" type="text"></div><br>
+    <div><label for="cs"> CS</label><input id="cs" type="text"></div><br>
+   </center>
+   <button onclick="check()">calculate</button>
+
+    
+</body>
+</html>
+<script>
+    function check(){
+        var sc = parseInt(document.getElementById('science').value);
+        var ma =parseInt( document.getElementById('maths').value);
+        var ch =parseInt( document.getElementById('chemistry').value);
+        var cs = parseInt(document.getElementById('cs').value);
+        var sum=sc+ma+ch+cs;
+        var avg=(sum/4);
+        if(avg>=75){
+            alert("You are Eligble to take Science")
+        }
+        else{
+            alert("You are not Eligble to take Science")
+        }
+        
+
+        
+
+    }
+    
+</script>
